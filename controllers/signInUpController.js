@@ -4,7 +4,7 @@ function signUp (req, res) {
   const user = new User(req.body)
   console.log(req.body)
   user.save((err, user) => {
-    if (err) return res.status(401).json({error: '/signup error 1'})
+    if (err) return res.status(401).json({error: '/signup error'})
     res.status(200).json({message: 'welcome! ', user})
   })
 }
